@@ -129,21 +129,25 @@
 
     <build>
         <plugins>
+            <!-- maven版本管理插件 -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>2.2</version>
             </plugin>
+            <!-- 依赖管理插件 -->
             <plugin>
                 <groupId>com.github.vongosling</groupId>
                 <artifactId>dependency-mediator-maven-plugin</artifactId>
                 <version>1.0.2</version>
             </plugin>
+            <!-- 发布包兼容性管理插件 -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>clirr-maven-plugin</artifactId>
                 <version>2.7</version>
             </plugin>
+            <!-- 配置约定插件 -->
             <plugin>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <version>1.4.1</version>
@@ -223,6 +227,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- 代码检查插件 -->
             <plugin>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>2.17</version>
@@ -243,6 +248,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- 版权审计插件 -->
             <plugin>
                 <groupId>org.apache.rat</groupId>
                 <artifactId>apache-rat-plugin</artifactId>
@@ -265,11 +271,13 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+            <!-- 自动化测试插件 -->
             <plugin>
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>4.3.0</version>
             </plugin>
+            <!-- 代码覆盖率检查插件 -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -309,6 +317,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- 单元测试插件 -->
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
@@ -317,16 +326,19 @@
                     <reuseForks>true</reuseForks>
                 </configuration>
             </plugin>
+            <!-- 缺陷检查插件 -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
                 <version>3.0.4</version>
             </plugin>
+            <!-- 代码分析插件 -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
                 <version>3.0.2</version>
             </plugin>
+            <!-- 质量检查插件 -->
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.19.1</version>
@@ -347,6 +359,7 @@
 
         <pluginManagement>
             <plugins>
+                <!-- 打包插件 -->
                 <plugin>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <version>3.0.0</version>
@@ -395,6 +408,7 @@
             </activation>
             <build>
                 <plugins>
+                    <!-- 签名验证插件 -->
                     <plugin>
                         <artifactId>maven-gpg-plugin</artifactId>
                         <version>1.6</version>
@@ -415,6 +429,7 @@
             <id>it-test</id>
             <build>
                 <plugins>
+                    <!-- 集成测试插件 -->
                     <plugin>
                         <artifactId>maven-failsafe-plugin</artifactId>
                         <version>2.19.1</version>
@@ -558,11 +573,13 @@
                 <artifactId>fastjson</artifactId>
                 <version>1.2.29</version>
             </dependency>
+            <!-- java字节码处理类库 -->
             <dependency>
                 <groupId>org.javassist</groupId>
                 <artifactId>javassist</artifactId>
                 <version>3.20.0-GA</version>
             </dependency>
+            <!-- 运行期动态访问系统本地库 -->
             <dependency>
                 <groupId>net.java.dev.jna</groupId>
                 <artifactId>jna</artifactId>
@@ -578,6 +595,7 @@
                 <artifactId>guava</artifactId>
                 <version>19.0</version>
             </dependency>
+            <!-- 分布式消息传递和流媒体开放标准 -->
             <dependency>
                 <groupId>io.openmessaging</groupId>
                 <artifactId>openmessaging-api</artifactId>
